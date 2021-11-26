@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week four project.</title>
+    <style>
+       body {
+    background-color: darkred;
+    text-align: left;
+    font-family: cursive;
+    font-weight: bold;
+    text-emphasis-color: rgb(168, 5, 73);
+    font-size: x-large;
+    background-image: url(images/pic3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+h1 {
+    font-weight: bolder;
+    font-family: monospace;
+    text-align: center;
+    font-size: xX-large;
+    background-color: peru;
+    opacity: 80%;
+}
+p {
+    font-family: cursive;
+    text-align: left;
+}
+.content {
+    background-color: orangered ;
+    opacity: 60%;
+}
+@media screen and (max-width: 900px) {
+    .column {
+     width: 50%;
+     }
+   }
+
+
+    @media screen and (max-width: 600px) {
+    .column {
+     width: 100%;
+     }
+    }
+    .button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+    
+    </style>
+</head>
+<body>
+     <h1>HUSTON PIZZA PLACE.</h1>
+     <hr>
+      
+     <fieldset>
+     <div class="content">
+     <p>what is your preffered pizza size? please chose below;</p>
+         <select class="form-control" id="beverage">
+            <option value="1"></option>extra small</option>
+            <option value="2">small</option>
+            <option value="3">meduim size</option>
+            <option value="4">large</option>
+            <option value="5">extra large</option>
+          </select>
+     </div>
+    </fieldset>
+
+    <fieldset>
+     <div class="content">
+         <p>what is your preffered crust you will want on your pizza? please select below;</p>
+         <select class="form-control" id="beverage">
+             <option>gluten free</option>
+             <option>stuffed crust</option>
+             <option>cracker crust</option>
+             <option>flat bread crust</option>
+             <option>cheese crust</option>
+             <option>thick crust</option>
+         </select>
+     </div>
+    </fieldset>
+
+    <fieldset>
+     <div class="content">
+         <p>please select the toppings you would like;</p>
+         <input type="checkbox" id="bacon" name="bacon" value="1">
+         <label for="bacon">bacon</label>
+         <br>
+         <input type="checkbox" id="peparroni" name="peparroni" value="2">
+         <label for="peparroni">peparroni</label>
+         <br>
+         <input type="checkbox" id="mushroom" name="mushroom" value="3">
+         <label for="mushroom">Mushroom</label>
+         <br>
+         <input type="checkbox" id="onion" name="onion" value="4">
+         <label for="onion">onion</label>
+         <br>
+         <input type="checkbox" id="sausage" name="sausage" value="5">
+         <label for="sausage">sausage</label>
+         <br>
+         <input type="checkbox" id="pineapple" name="pineapple" value="6">
+         <label for="pineapple">pineapple</label>
+         <br>
+         <input type="checkbox" id="ham" name="ham" value="7">
+         <label for="ham">Ham</label>
+     </div>
+    </fieldset>
+
+    <fieldset>
+        <div class="content">
+            <p>how many pizza(S) are you looking to buy from us?</p>
+            number: <input type="number" name="mobile" placeholder="12">
+        </div>
+    </fieldset>
+
+
+   <fieldset> 
+     <div class="content">
+        <p>do you want your pizza(S) delivered? please select 'yes or no' below;</p>
+        <div class="radio">
+            <label>
+                <input type="radio" name="yes" value="yes">
+                YES.
+              </label>
+            <br>
+            <label>
+                <input type="radio" name="no" value="no"> NO
+            </label>
+        </div> 
+     </div>
+    </fieldset>
+
+    <fieldset>
+        <div class="content">
+            <p>what is your preffered time and date of your order delivery?</p>
+            <label>delivery date:</label><input type="date" name="date"/>
+            <label>delivery time:</label><input type="time" name="time"/>
+        </div>
+    </fieldset>
+
+   <fieldset> 
+     <div class="content">
+         <p>if yes to the previous question, please tell us where to deliever and or who you are below;</p>
+         <form name="input" action="#" method="post">
+            First name: <input type="text" name="firstname" placeholder="John">
+            Last name: <input type="text" name="lastname" placeholder="Smith"><br/>
+            email: <input type="text" name="email" placeholder="miko@gmai.com"><br>
+            Address:<input type="email" name="email" placeholder="1234 Street City, ST Zip">
+            </form>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <div class="content">
+            <p> what is your preffered mode of payment?</p>
+            <select name="payment">
+                <option>select payment option</option>
+                <option value="1">via credit card</option>
+                <option value="2">mobile-cash</option>
+                <option value="3">bank transfer</option>
+                <option value="4">cash on delivery</option>
+                </select>
+        </div>
+    </fieldset>
+            <button class="button">Click Me</button>
+     
+</body>
+</html>
