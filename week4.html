@@ -5,17 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>week four project.</title>
     <style>
-       body {
-    background-color: darkred;
-    text-align: left;
-    font-family: cursive;
-    font-weight: bold;
-    text-emphasis-color: rgb(168, 5, 73);
-    font-size: x-large;
-    background-image: url(images/pic3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;  
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  text-align: left;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: x-large; 
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 h1 {
     font-weight: bolder;
     font-family: monospace;
@@ -73,6 +78,7 @@ p {
      <hr>
       
      <fieldset>
+         <button onclick="myFunction()">Toggle dark mode</button>
      <div class="content">
      <p>what is your preffered pizza size? please chose below;</p>
      <label for="beverage">beverage ksh.10</label>
@@ -222,5 +228,13 @@ p {
         return false;
       }
     </script>
+
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 </body>
 </html>
