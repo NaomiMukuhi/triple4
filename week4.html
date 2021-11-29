@@ -66,9 +66,7 @@ p {
   }     
     </style>
 
-    <script type="text/javascript">
-        
-    </script>
+   
 </head>
 <body>
      <h1>HUSTON PIZZA PLACE.</h1>
@@ -77,8 +75,9 @@ p {
      <fieldset>
      <div class="content">
      <p>what is your preffered pizza size? please chose below;</p>
+     <label for="beverage">beverage ksh.10</label>
          <select class="form-control" id="beverage">
-            <option value="1"></option>extra small</option>
+            <option value="1">extra small</option>
             <option value="2">small</option>
             <option value="3">meduim size</option>
             <option value="4">large</option>
@@ -90,7 +89,8 @@ p {
     <fieldset>
      <div class="content">
          <p>what is your preffered crust you will want on your pizza? please select below;</p>
-         <select class="form-control" id="beverage">
+            <label for="crust">crust ksh.20</label>
+         <select class="form-control" id="crust">
              <option>gluten free</option>
              <option>stuffed crust</option>
              <option>cracker crust</option>
@@ -104,6 +104,9 @@ p {
     <fieldset>
      <div class="content">
          <p>please select the toppings you would like;</p>
+         <label for="toppings"> toppings ksh. 30</label>
+         <br>
+         <select class="form-control" id="toppings">
          <input type="checkbox" id="bacon" name="bacon" value="1">
          <label for="bacon">bacon</label>
          <br>
@@ -124,13 +127,14 @@ p {
          <br>
          <input type="checkbox" id="ham" name="ham" value="7">
          <label for="ham">Ham</label>
+         </select>
      </div>
     </fieldset>
 
     <fieldset>
         <div class="content">
             <p>how many pizza(S) are you looking to buy from us?</p>
-            number: <input type="number" name="mobile" placeholder="12">
+            number: <input type="number" name="mobile" placeholder="156">
         </div>
     </fieldset>
 
@@ -163,10 +167,10 @@ p {
      <div class="content">
          <p>if yes to the previous question, please tell us where to deliever and or who you are below;</p>
          <form name="input" action="#" method="post">
-            First name: <input type="text" name="firstname" placeholder="John">
-            Last name: <input type="text" name="lastname" placeholder="Smith"><br/>
-            email: <input type="text" name="email" placeholder="miko@gmai.com"><br>
-            Address:<input type="email" name="email" placeholder="1234 Street City, ST Zip">
+            First name: <input type="text" name="firstname">
+            Last name: <input type="text" name="lastname"><br/>
+            email: <input type="text" name="email"><br>
+            Address:<input type="email" name="email">
             </form>
         </div>
     </fieldset>
@@ -184,10 +188,39 @@ p {
         </div>
     </fieldset>
 
+     <fieldset>
+     <h3>Cost</h3>
+      <div class="content">
+        $<input type="text" id="cost" value="0" readonly size="3"/>
+      </div>
+      </fieldset>
+
     <fieldset>
         <div class="content">
-    <button class="button">Click Me</button>
+        <input type="submit" />
 </div>
 </fieldset>
+
+ <script type="text/javascript">
+        function updateTotal() {
+            var tot = 0;
+            tot += f.beverage.value *10 +
+                   f.crust.value *20 +
+                   f.toppings.value *30;
+         document.getElementById("cost").value = tot.toFixed(2);
+        }
+
+         var f = document.forms['myForm'];
+      var sel = document.getElementsByTagName("select");
+
+      for(var i=0; i<sel.length; i++) {
+        sel[i].onchange = function(){updateTotal()};
+      }
+      
+      f.onsubmit = function(){
+        alert("Your total cost will be: \\$" + f.cost.value);
+        return false;
+      }
+    </script>
 </body>
 </html>
